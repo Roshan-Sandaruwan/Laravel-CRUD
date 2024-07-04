@@ -8,7 +8,12 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index(){
-        return view('products.index');
+
+        $products = Product::all();
+
+        return view('products.index',[
+            'products'=> $products
+        ]);
 
     }
 
@@ -30,7 +35,7 @@ class ProductController extends Controller
 
         $newProduct = Product::create($data);
 
-        return redirect()->route('product.index');
+        return redirect()->route('product.index')->with('success', 'Product created successfully.');
 
 
     }

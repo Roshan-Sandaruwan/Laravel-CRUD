@@ -34,7 +34,7 @@
 
 
 
-    <input type="submit" class="btn btn-primary" value="Save a new product" />
+    <input type="submit" class="btn btn-primary" value="Add product" />
   </form>
 
 
